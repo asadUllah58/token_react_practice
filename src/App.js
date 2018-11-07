@@ -1,25 +1,38 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './common.scss';
+import {Header, HeroSection, Timeline, Statistics, Tokenomics, TokenRelease, RoadMap, Subscribe, Development, Footer} from './components';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        {/* <div id="loader">
+          <div className="position-center-center">
+            <div className="ldr"></div>
+          </div>
+        </div> */}
+
+        <div id="wrap">
+          <Header />
+          <HeroSection />
+
+          
+          <div id="content">
+            <Timeline />
+            <Statistics />
+            <Tokenomics />
+            <TokenRelease />
+            <RoadMap />
+            <Development />
+            <Subscribe />
+          </div>
+
+          <Footer />
+        </div>
+
+        <a href="#" className="cd-top"><i className="ion-chevron-up"></i></a>
       </div>
     );
   }
